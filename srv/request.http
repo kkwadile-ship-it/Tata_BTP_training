@@ -1,0 +1,90 @@
+###
+GET http://localhost:4004/odata/v4/catlog
+ 
+###
+GET http://localhost:4004/odata/v4/catlog/EmployeeSrv
+ 
+###
+GET http://localhost:4004/odata/v4/catlog/BusinessSrv
+ 
+###
+GET http://localhost:4004/odata/v4/catlog/AddressSrv
+ 
+###
+GET http://localhost:4004/odata/v4/catlog/ProductSrv
+ 
+###
+GET http://localhost:4004/odata/v4/catlog/PurchaseorderSrv
+ 
+###
+GET http://localhost:4004/odata/v4/catlog/PurchaseitemSrv
+###
+POST http://localhost:4004/odata/v4/catlog/EmployeeSrv
+Content-Type: application/json
+ 
+{
+      "Currency_code": "USD",
+      "ID": "02BD2137-0890-1EEA-A6C2-BB55C1978999",
+      "accountNumber": "111222000",
+      "bankId": "510000666",
+      "bankName": "My Bank of Mumbai",
+      "email": "rahul.kl@itelo.info",
+      "gender": "F",
+      "language": "E",
+      "loginName": "RAHULKL",
+      "nameFirst": "K L",
+      "nameInitials": null,
+      "nameLast": "Rahul",
+      "nameMiddle": null,
+      "phoneNumber": "+1 999 3741 524",
+      "salaryAmount": "67549.00"
+}
+###
+PUT http://localhost:4004/odata/v4/catlog/EmployeeSrv/02BD2137-0890-1EEA-A6C2-BB55C19867FB
+Content-Type: application/json
+ 
+{
+      "Currency_code": "USD",
+      "salaryAmount": "85000.00"
+}
+
+###
+DELETE http://localhost:4004/odata/v4/catlog/EmployeeSrv/02BD2137-0890-1EEA-A6C2-BB55C19787FB
+
+###
+GET http://localhost:4004/odata/v4/catlog/getEmployeeInfo()
+
+###
+POST http://localhost:4004/odata/v4/catalog/createEmployee
+Content-Type: application/json
+ 
+{
+      "input" : {
+      "Currency_code": "USD",
+      "ID": "02BD2137-0890-1EEA-A6C2-BB55C1978010",
+      "accountNumber": "111222000",
+      "bankId": "510000666",
+      "bankName": "My Bank of Mumbai",
+      "email": "rahul.kl@itelo.info",
+      "gender": "F",
+      "language": "E",
+      "loginName": "RAHULKL",
+      "nameFirst": "K L",
+      "nameInitials": null,
+      "nameLast": "Rahul",
+      "nameMiddle": null,
+      "phoneNumber": "+1 999 3741 524",
+      "salaryAmount": "67549.00"
+      }
+
+}
+###
+GET http://localhost:4004/odata/v4/catlog/POSrv('74867AD200E41EDBA5D8B0C98DC28052')/largestOrder()
+###
+GET http://localhost:4004/odata/v4/catalog/POSrv/74867AD200E41EDBA5D8B0C98DC2A052
+ 
+###
+POST http://localhost:4004/odata/v4/catalog/POSrv('74867AD200E41EDBA5D8B0C98DC2A052')/discountPrice
+Content-Type: application/json
+ 
+{}

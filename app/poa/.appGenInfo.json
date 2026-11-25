@@ -1,0 +1,44 @@
+using CatalogService as service  from '../../srv/service';
+ 
+annotate service.POSrv with @(
+    UI.SelectionFields : [
+        PO_ID,
+        GROSS_AMOUNT,
+        PARTNER.COMPANY_NAME,
+        PARTNER.ADD.COUNTRY
+    ],
+    UI.LineItem : [
+        {
+            $Type : 'UI.DataField',
+            Value : PO_ID
+        },
+        {
+            $Type : 'UI.DataField',
+            Value : PARTNER.COMPANY_NAME
+        },
+        {
+            $Type : 'UI.DataField',
+            Value : PARTNER.BP_ID
+        },
+        {
+            $Type : 'UI.DataField',
+            Value : GROSS_AMOUNT
+        },
+        {
+            $Type : 'UI.DataField',
+            Value : CURRENCY_code
+        },
+        {
+            $Type : 'UI.DataField',
+            Value : LIFECYCLE_STATUS
+        },
+        {
+            $Type : 'UI.DataField',
+            Value : OVERALL_STATUS
+        },
+        {
+            $Type : 'UI.DataField',
+            Value : PARTNER.ADD.COUNTRY
+        }
+    ]
+)
